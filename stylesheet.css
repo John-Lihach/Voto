@@ -1,0 +1,442 @@
+body, html{
+	margin: 0;
+	margin-bottom: .1;
+	font-family: Arial;
+	background-color: grey;
+	overflow-x: hidden;
+}
+
+#header{
+	position: relative;
+	height: 5em;
+	background-color: rgb(73, 87, 110);
+	box-shadow: 0 10px 5px rgba(0,0,0,.25);
+	z-index: 5;
+}
+
+#titleBar h1{
+	position: relative;
+	color: white;
+	letter-spacing: 5px;
+	font-size: 3em;
+	line-height: 1em;
+	text-align: center;
+	top: .33em;
+}
+
+.menuButton{
+	position: absolute;
+	height: .5em;
+	width: 2.5em;
+	display: inline-block;
+	border-top: 1.5em double white;
+	border-bottom: .5em solid white;
+	top: 1em;
+	left: 1em;
+	cursor: pointer;
+}
+
+.menuButtonSelected{
+	border-color: rgba(255,255,255,.5);
+}
+
+.menuButton:hover, .menuButtonSelected:hover {
+	border-color: lightblue;
+}
+
+#menuContainer{
+	position: relative;
+}
+
+#menu{
+	position: absolute;
+	min-height: calc(100% - 5em);
+	width: 10em;
+	display: inline-block;
+	background-color: rgb(73, 87, 110);
+	float: left;
+	z-index: 6;
+	box-shadow: 10px 10px 5px rgba(0,0,0,.25);
+}
+
+#menu a{
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 1em;
+	margin-top: 1em;
+	border-left: 5px solid white;
+}
+
+#menu a:hover{
+	background-color: lightblue;
+}
+
+.accountButton{
+	position: absolute;
+	height: 2.2em;
+	width: 5em;
+	display: inline-block;
+	border: .2em solid white;
+	border-radius: .5em;
+	top: 1em;
+	right: 1em;
+	cursor: pointer;
+	text-align: center;
+	color: white;
+	line-height: 2.2em;
+}
+
+.accountButtonSelected{
+	border-color: rgba(255,255,255,.5);
+	color: rgba(255,255,255,.5);
+}
+
+.accountButton:hover, .accountButtonSelected:hover {
+	background-color: lightblue;
+}
+
+#contentContainer{
+	position: relative;
+	/*background-color: grey;*/
+}
+
+#contentHeaders{
+	position: relative;
+	height: 3em;
+	background-color: darkgrey;
+}
+
+.contentHeader{
+	position: absolute;
+	height: calc(100% - 3px);
+	width: 33.3%;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.contentHeader:hover{
+	border-bottom: 3px solid lightblue;
+}
+
+.contentHeader h2{
+	position: relative;
+	color: white;
+	letter-spacing: 5px;
+	font-size: 1em;
+	line-height: 1em;
+	text-align: center;
+	top: .33em;
+}
+
+#content{
+	position: relative;
+	min-height: calc(100% - 3em - 5em);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	color: rgb(25,25,25);
+}
+
+.contentSection{
+	min-height: 100%;
+	width: 42em;
+	background-color: rgb(120,120,120);
+}
+
+#contentFeed{
+	border-right: 2px solid rgb(130,130,130);
+	box-sizing: border-box;
+}
+
+#contentFocus{
+	position: relative;
+	border-left: 2px solid rgb(130,130,130);
+	box-sizing: border-box;
+}
+
+.contentItem{
+	box-sizing: border-box;
+	height: 10em;
+	width: calc(100% - 1em);
+	overflow: hidden;
+	margin: .5em;
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 1em;
+	padding-top: 1em;
+	/*border-bottom: .25em solid white;*/
+	cursor: pointer;
+}
+
+.contentItem:hover{
+	box-shadow: 0 0 5px rgba(0,0,0,.25);
+}
+
+.contentItemInfo{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.contentItemInfo h1{
+	margin: 0;
+}
+
+.contentItemLikes{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#contentFocusInfo{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#contentFocusAccount{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	font-size: 1em;
+}
+
+#contentFocusAccount h3{
+	margin: 0;
+	margin-right: .5em;
+}
+
+.accountLink{
+	text-decoration: none;
+	color: rgb(25,25,25);
+}
+
+.addPerson{
+	cursor: pointer;
+	color: lightblue;
+}
+
+.addPerson:hover{
+	color: lightgreen;
+}
+
+#contentFocusLikes{
+	margin-right: 1.5em;
+	color: lightblue;
+	text-align: center;
+}
+
+#contentFocusLikes i{
+	font-size: 2em;
+	margin-bottom: .25em;
+	cursor: pointer;
+}
+
+#contentFocusLikes i:hover{
+	color: lightgreen;
+}
+
+.userLiked{
+	color: lightgreen;
+}
+
+.userFollowing{
+	color: lightgreen;
+}
+
+.contentImgContainer{
+	height: 100%;
+	width: 40%;
+	overflow: hidden;
+	margin-right: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.thumbnail{
+	height: 100%;
+	width: auto;
+}
+
+#stickyDiv{
+	box-sizing: border-box;
+	padding: .5em;
+	position: sticky;
+	top: 0;
+	overflow-y: auto;
+	max-height: 100vh;
+}
+
+#contentFocusImgContainer{
+	position: relative;
+	max-height: 30em;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contentFocusImgVid{
+	height: auto;
+	width: 100%;
+}
+
+#commentForm{
+	margin: 1em;
+	text-align: right;
+}
+
+#commentForm textarea{
+	width: 100%;
+	resize: none;
+	font-size: 1.25em;
+	margin-top: .2em;
+	color: black;
+	background-color: transparent;
+	border: .2em solid white;
+	border-radius: .5em;
+	outline: none;
+}
+
+#commentForm textarea:focus{
+	border: .2em solid lightblue;
+}
+
+#commentForm .submitButton{
+	display: inline-block;
+	margin-right: 0;
+}
+
+.comment{
+	padding: .5em;
+	padding-bottom: .25em;
+	margin: .5em;
+	margin-bottom: 1em;
+	border-left: .25em solid white;
+}
+
+.comment b{
+	text-decoration: underline;
+}
+
+.comment p{
+	/*padding-left: 2em;*/
+}
+
+#accountWindow{
+	position: absolute;
+	height: 35em;
+	width: 35em;
+	left: calc(50% - 18.5em);
+	top: 10%;
+	display: none;
+	background-color: rgb(200, 200, 200);
+	border: .25em solid white;
+	border-radius: 1em;
+	overflow-y: auto;
+	z-index: 10;
+	padding: 1em;
+	text-align: center;
+	color: white;
+	box-sizing: border-box;
+}
+
+#accountWindow h2{
+	display: inline-block;
+	width: calc(11.66em - .25em - 1em);
+	font-size: 1.5em;
+	margin: 0;
+	line-height: 1.2em;
+	margin-top: .25em;
+	cursor: pointer;
+}
+
+.accountHeadingSelected{
+	border-bottom: .25em solid white;
+}
+
+#accountWindow h2:hover{
+	border-bottom: .25em solid lightblue;
+}
+
+#accountContentContainer{
+	padding-top: 1em;
+}
+
+.inputContainer{
+	font-size: 1.25em;
+	text-align: left;
+	margin: 1em;
+}
+
+.inputContainer input{
+	display: block;
+	border: none;
+	border-bottom: .25em solid white;
+	font-size: 1em;
+	margin-bottom: 1.7em;
+	margin-top: .2em;
+	color: rgb(73, 87, 110);
+	background-color: transparent;
+	width: 100%;
+}
+
+.inputContainer input:focus{
+	outline: none;
+	border-bottom: .25em solid lightblue;
+}
+
+.submitButton{
+	display: block;
+	border: .25em solid white;
+	color: white;
+	font-size: 1em;
+	border-radius: 1em;
+	cursor: pointer;
+	margin: 1em;
+	padding: .25em;
+	width: 10em;
+	font-weight: bold;
+	background-color: transparent;
+}
+
+.submitButton:hover{
+	background-color: lightblue;
+}
+
+@media only screen and (max-width: 84em){
+	.contentItem{
+		height: 22em;
+		flex-direction: column;
+	}
+	.contentItemInfo{
+		margin-left: .5em;
+		margin-top: .2em;
+	}
+	.contentImgContainer{
+		/*width: 75%;*/
+		width: 100%;
+		margin-bottom: .1em;
+	}
+	.contentSection{
+		width: 60%;
+	}
+	#contentFeed{
+		width: 40%;
+	}
+}
+
+@media only screen and (max-width: 35em){
+	#accountWindow{
+		width: 100%;
+		padding: 5px;
+		left: 0;
+	}
+	#accountWindow h2{
+		width: calc(50% - 2.5px);
+	}
+}

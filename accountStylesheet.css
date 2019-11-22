@@ -1,0 +1,100 @@
+#contentContainer{
+	margin-right: 1em;
+	display: flex;
+	min-height: calc(100% - 5em);
+	flex-direction: row;
+	color: rgb(25,25,25);
+	box-sizing: border-box;
+}
+
+.contentSide{
+	height: 100%;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	margin-left: 1em;
+}
+
+.contentSide h2{
+	line-height: 2em;
+}
+
+#accountTitle{
+	color: white;
+	height: 2em;
+	font-size: 3em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#accountTitle span{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#accountTitle i{
+	margin-left: .2em;
+	font-size: 1.25em;
+}
+
+#uploadArea{
+	background-color: rgb(120, 120, 120);
+	padding: 1em;
+	padding-top: 0;
+	border-radius: 10px;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+#uploadArea h2{
+	text-align: center;
+}
+
+#fileUploadForm{
+	display: flex;
+	flex-direction: column;
+}
+
+#submitContent{
+	margin-top: 1em;
+	width: 7em;
+}
+
+#titleInput{
+	width: 75%;
+	margin: 0;
+	line-height: auto;
+	height: 1.5em;
+}
+
+#titleInput input{
+	color: black;
+}
+
+#contentFeed{
+	/*height: calc(50vh - 8em);*/
+	max-height: 25em;
+	width: 100%;
+	overflow-y: auto;
+}
+
+#commentSection{
+	/*height: calc(50vh - 8em);*/
+	max-height: 25em;
+	overflow-y: auto;
+	background-color: rgb(120,120,120);
+	width: 100%;
+}
+
+@media only screen and (max-width: 50em){
+	#contentContainer{
+		flex-direction: column;
+		align-items: center;
+	}
+	.contentSide{
+		width: 100%;
+		align-items: center;
+	}
+}
